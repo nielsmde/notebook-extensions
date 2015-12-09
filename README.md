@@ -44,7 +44,7 @@ There is a basic installation script, that can work. Use it like
     ./INSTALL all
 
 to install all extensions.
-To install only single extensions names can be given:
+To install only some, extension names can be given:
 
     ./INSTALL slides tableofcontents
 
