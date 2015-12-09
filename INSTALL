@@ -10,6 +10,10 @@ function install_extension {
     then
         echo "Installing... $1"
         $ACTION $OPTS $1.js $JUPYTER_CUSTOM
+        if [[ -f $1.css ]]
+        then
+            $ACTION $OPTS $1.css $JUPYTER_CUSTOM
+        fi
         LINE="require(['custom/$1']);"
         if grep -qF $LINE $JUPYTER_CUSTOM/custom.js
         then

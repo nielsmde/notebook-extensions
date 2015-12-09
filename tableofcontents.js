@@ -40,7 +40,7 @@ function table_of_contents() {
 }
 
 
-$('head').append($('<link type="text/css" rel="stylesheet" href="/custom/nbtoc.css" />'));
+$('head').append($('<link type="text/css" rel="stylesheet" href="/custom/tableofcontents.css" />'));
 
 $('body').append($('<div id="toc" class="hidden" />'));
 
