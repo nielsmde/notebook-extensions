@@ -40,28 +40,8 @@ function table_of_contents() {
 }
 
 
-var toc_style = document.createElement('style');
-toc_style.innerHTML = '#toc { \
-position: fixed; z-index:9999; \
-background:white;padding:10px; min-width:150px;\
-box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.2); ;right:100px; transition:all 2s 2s;transform: translate(100%);}\
-#toc.hidden {display:none;} #toc:hover {right:5px;transform: translate(0);transition:all 0.3s;} \
-#toc a {color:black;} \
-#toc h1,h2,h3,h4,h5,h6 {font-size:1em;margin:0.5em} #toc h1 {font-weight:bold;} \
-#toc h2 {padding-left:1em} #toc h3 {padding-left:1.5em} #toc h4 {padding-left:2em} #toc h5 {padding-left:2.5em} #toc h6 {padding-left:3em} '
+$('head').append($('<link type="text/css" rel="stylesheet" href="/custom/nbtoc.css" />'));
 
-document.head.appendChild(toc_style);
-
-/*
-var toc_style = document.createElement('link');
-toc_style.type = 'text/css';
-toc_style.rel = 'stylesheet';
-toc_style.href='static/custom/nbtoc.css';
-document.head.appendChild(toc_style);
-*/
-var toc = document.createElement('div');
-toc.id = 'toc';
-toc.setAttribute('class','hidden');
-document.body.appendChild(toc);
+$('body').append($('<div id="toc" class="hidden" />'));
 
 Jupyter.toolbar.add_buttons_group([{'label':'Table of Contents', 'icon':'fa-list','callback':table_of_contents}])
