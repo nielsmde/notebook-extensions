@@ -39,11 +39,23 @@ Adds functionality to search and replace strings in the notebook cells.
 
 ## Installation
 
-Locate your Jupyter custom directory, when you didn't create a new profile it is something like `~/.jupyter/custom`
-If you have a profile, for example `profile_default`, the custom directory should be here: `~/.jupyter/profile_default/static/custom`.
+The installation is similar for all extensions, just replace `slides` with the name of the extension which should be installed.
 
-Copy the extension file `jnb-toc.js` to `custom` and add the following line in the file `custom/custom.js`:
+1. Copy the extension file to your Jupyter custom directory:
+    
+    cp slides.js ~/.jupyter/custom
+    
+2. Add one line of code to the file `~/.jupyter/custom/custom.js`:
+    
+    require(['{extension}']);
 
-    require(['custom/jnb-toc']);
+### Profile directories
+
+The above steps assumed no Jupyter profile is used.
+To install the extensions for a profile, the path of the Jupyter configuration directory changes:
+
+    ~/.jupyter/custom --> ~/.jupyter/{profile}/static/custom
+    
+Where `{profile}` is the name of the profile which is used.
  
 
