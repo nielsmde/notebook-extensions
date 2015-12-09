@@ -41,13 +41,17 @@ Adds functionality to search and replace strings in the notebook cells.
 
 The installation is similar for all extensions, just replace `slides` with the name of the extension which should be installed.
 
-1. Copy the extension file to your Jupyter custom directory:
+1.  Copy the extension file to your Jupyter custom directory:
     
+    ```
     cp slides.js ~/.jupyter/custom
+    ```
     
-2. Add one line of code to the file `~/.jupyter/custom/custom.js`:
-    
+2.  Add one line of code to the file `~/.jupyter/custom/custom.js`:
+
+    ```    
     require(['{extension}']);
+    ```
 
 ### Profile directories
 
