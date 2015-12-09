@@ -39,6 +39,17 @@ Adds functionality to search and replace strings in the notebook cells.
 
 ## Installation
 
+There is a basic installation script, that can work. Use it like
+
+    ./INSTALL all
+
+to install all extensions.
+To install only single extensions names can be given:
+
+    ./INSTALL slides tableofcontents
+
+### Manual Installation
+
 The installation is similar for all extensions, just replace `slides` with the name of the extension which should be installed.
 
 1.  Copy the extension file to your Jupyter custom directory:
