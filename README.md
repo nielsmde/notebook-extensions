@@ -7,7 +7,7 @@ All the extensions are experimental and do only work with recent versions of Jup
 
 ### Table of contents
 
-File: `tableofcontents.js`
+Files: `tableofcontents.js, tableofcontents.css`
 
 This is a simple extension for Jupyter notebooks, that adds a list of all markdown headers.
 The list can be used to navigate through the notebook via the provided anchor links.
@@ -52,7 +52,7 @@ To install only some, extension names can be given:
 
 The installation is similar for all extensions, just replace `slides` with the name of the extension which should be installed.
 
-1.  Copy the extension file to your Jupyter custom directory:
+1.  Copy the extension files to your Jupyter custom directory:
     
     ```
     cp slides.js ~/.jupyter/custom
@@ -61,7 +61,7 @@ The installation is similar for all extensions, just replace `slides` with the n
 2.  Add one line of code to the file `~/.jupyter/custom/custom.js`:
 
     ```    
-    require(['{extension}']);
+    require(['custom/slides']);
     ```
 
 ### Profile directories
