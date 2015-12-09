@@ -1,0 +1,41 @@
+#!/bin/bash
+
+JUPYTER_CUSTOM="$HOME/.jupyter/custom"
+
+ACTION=cp
+OPTS=''
+
+function install_extension {
+    if [[ -f $1.js ]]
+    then
+        echo "Installing... $1"
+        $ACTION $OPTS $1.js $JUPYTER_CUSTOM
+        LINE="require(['custom/$1']);"
+        if grep -qF $LINE $JUPYTER_CUSTOM/custom.js
+        then
+            :
+        else
+            echo "Adding $LINE to custom.js"
+            echo $LINE>> $JUPYTER_CUSTOM/custom.js
+        fi
+    fi
+}
+
+while [[ $# > 0 ]]
+do
+
+case $1 in
+    all)
+    for EXT in *.js
+    do
+        install_extension ${EXT%.js}
+    done
+    ;;
+    *)
+    install_extension ${1%.js}
+    ;;
+esac
+shift    
+done
+
+
