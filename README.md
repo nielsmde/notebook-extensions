@@ -31,11 +31,6 @@ Two options are accessible through the drop-down menu:
     Before using the notebook again, the kernel has to be interrupted manually, by clicking either the slides button or the notebooks interrupt button.
 2.  **Debug Mode**: Show the notebook cell the shell command is running in and thereby see its output.
 
-### Find and replace
-
-File: `findandreplace.js`
-
-Adds functionality to search and replace strings in the notebook cells.
 
 ## Installation
 
