@@ -12,7 +12,7 @@ Files: `tableofcontents.js, tableofcontents.css`
 This is a simple extension for Jupyter notebooks, that adds a list of all markdown headers.
 The list can be used to navigate through the notebook via the provided anchor links.
 
-Note that the table of contents is only rebuild when it is opened or closed, so after adding new headings it has to be reopen.
+Note that the table of contents is only rebuild when it is opened or closed, so after adding new headings it has to be reopened.
 
 ### Slides
 
